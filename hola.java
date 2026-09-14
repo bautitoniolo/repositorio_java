@@ -1,0 +1,95 @@
+public class hola {
+    public static void main(String[] args) {
+        System.out.println("Hola, mundo!");
+    }           
+}
+
+public class alumnos {
+    primer_alumno alumno1 = new primer_alumno("Juan", 20);  
+
+} public class primer_alumno {
+    private String nombre;
+    private int edad;
+
+    public primer_alumno(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+}
+
+public class variables {
+    static int n = 4;
+    static int x = 5;
+    static int sum = n + x;
+    public static void main(String[] args)} {
+        system.out.println("La suma es: " + sum);
+    }
+
+    return sum; 
+       for (int i = 0 ; i < 10 ; i++) {
+        system.out.println("El valor de i es: " + i);
+}
+
+
+ public class auto {
+    private String auto;
+    static int patente;
+    static String marca;
+     
+    public static void main(String[] args) {
+        auto miAuto = new auto();
+        miAuto.auto = "Toyota";
+        miAuto.patente = 1234;
+        miAuto.marca = "Corolla";
+
+        System.out.println("Mi auto es un " + miAuto.marca + " con patente " + miAuto.patente);
+    }
+    
+ }
+
+ public class persona { 
+    private String nombre;
+    static int edad;
+    static float altura; 
+    static float peso; 
+    private String direccion;
+    private String telefono;
+    private String correo;
+
+    public persona(String nombre, int edad, float altura, float peso, String direccion, String telefono, String correo) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.altura = altura;
+        this.peso = peso;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.correo = correo;
+    }
+ }
+
+ public class estudiante extends persona {
+    private String carrera;
+    private int anioIngreso;
+
+    public estudiante(String nombre, int edad, float altura, float peso, String direccion, String telefono, String correo, String carrera, int anioIngreso) {
+        super(nombre, edad, altura, peso, direccion, telefono, correo);
+        this.carrera = carrera;
+        this.anioIngreso = anioIngreso;
+    }
+
+    public String getCarrera() {
+        return carrera;
+    }
+
+    public int getAnioIngreso() {
+        return anioIngreso;
+    }
+ }
