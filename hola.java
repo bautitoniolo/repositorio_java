@@ -161,4 +161,17 @@ public class mayorEdad {
         } else {
             System.out.println("Es menor de edad");
         }
-    }}
+    }
+}
+
+
+public class ejemplo{ 
+    public static void main(String [] args)  {
+    System.out.println("Ingrese su correo electronico: ");
+    String email = email.next.Line();
+    if (email.equals(email)) {
+        System.out.println("El correo electronico es correcto");
+    } else {
+        System.out.println("El correo electronico es incorrecto"); 
+    }
+}
