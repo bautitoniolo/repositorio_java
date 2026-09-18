@@ -175,3 +175,18 @@ public class ejemplo{
         System.out.println("El correo electronico es incorrecto"); 
     }
 }
+
+
+public class datosExpuestos {
+    public static void main(String [] args )
+    String nombre = "Juan";
+    String apellido = "Perez";
+    int edad = 20;
+    String direccion = "Calle Falsa 123";   
+    
+}
+public class enPantalla { 
+    public static void main(String [] args) {
+   System.out.println(datosExpuestos.nombre);
+    }
+}
