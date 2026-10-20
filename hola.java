@@ -210,3 +210,28 @@ public class escala {
     }
 
 }
+
+public class intercambio {
+    public static void main(String [] args) {
+        int a = 5;
+        int b = 10;
+        System.out.println("Antes: a = " + a + ", b = " + b);
+
+        int aux = a;
+        a = b;
+        b = aux;
+        System.out.println("Despues: a = " + a + ", b = " + b);
+    }
+}
+
+public class precioFinal {
+    static final double IVA = 0.21;
+
+    public static void main(String [] args) {
+        double precio = 1500;
+        double precioConIva = precio + precio * IVA;
+        System.out.println("Precio sin IVA: $" + precio);
+        System.out.println("IVA (21%): $" + precio * IVA);
+        System.out.println("Precio final: $" + precioConIva);
+    }
+}
