@@ -190,3 +190,48 @@ public class enPantalla {
    System.out.println(datosExpuestos.nombre);
     }
 }
+
+public class retorno {
+     public static void main(String [] args){ 
+     for ( int i = 0 ; i < 10 ; i++) 
+       System.out.println("El valor de i es: " + i);
+     }
+}
+ 
+public class escala {
+    public static void main(String [] args ){
+        int i = 0;
+        while (i < 10 && i >= 0) { 
+            do {
+                System.out.pintln("El valor de i es: " + i);
+                i++;
+            } while (i < 10);
+        }
+    }
+
+}
+
+public class intercambio {
+    public static void main(String [] args) {
+        int a = 5;
+        int b = 10;
+        System.out.println("Antes: a = " + a + ", b = " + b);
+
+        int aux = a;
+        a = b;
+        b = aux;
+        System.out.println("Despues: a = " + a + ", b = " + b);
+    }
+}
+
+public class precioFinal {
+    static final double IVA = 0.21;
+
+    public static void main(String [] args) {
+        double precio = 1500;
+        double precioConIva = precio + precio * IVA;
+        System.out.println("Precio sin IVA: $" + precio);
+        System.out.println("IVA (21%): $" + precio * IVA);
+        System.out.println("Precio final: $" + precioConIva);
+    }
+}
