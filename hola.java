@@ -1,237 +1,136 @@
-public class hola {
-    public static void main(String[] args) {
-        System.out.println("Hola, mundo!");
-    }           
-}
-
-public class alumnos {
-    primer_alumno alumno1 = new primer_alumno("Juan", 20);  
-
-} public class primer_alumno {
-    private String nombre;
-    private int edad;
-
-    public primer_alumno(String nombre, int edad) {
-        this.nombre = nombre;
-        this.edad = edad;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public int getEdad() {
-        return edad;
+public class Holamundo { 
+    public static void main(String[] args ) {
+        System.out.print("Hola mundo");
+        System.out.println("Hola mundo"); // salta a la siguiente pagina, pero el primer print tambien tiene que ser con ln 
     }
 }
 
-public class variables {
-    static int n = 4;
-    static int x = 5;
-    static int sum = n + x;
-    public static void main(String[] args)} {
-        system.out.println("La suma es: " + sum);
-    }
+// acordate de las conversiones de datos, cuando definimos una variable tenemos que acordarnos de la cantidad de bits que tiene cada uno 
+// esto lo hago mas que nada a forma de repaso, quiero tener bien frescos los temas viejos para poder seguir sin problemas 
 
-    return sum; 
-       for (int i = 0 ; i < 10 ; i++) {
-        system.out.println("El valor de i es: " + i);
+
+public static void main(String [] args) {
+    Scanner teclado = new Scnner(System.in);
+    int valor; // en este caso es un entero, pero puede ser cualquier tipo de dato, por ejemplo double, float, char, etc.
+    System.out.println("Ingrese un valor: ");
+    valor = teclado.nextInt();
+    System.out.println("El valor ingresado es: " + valor);
 }
 
-
- public class auto {
-    private String auto;
-    static int patente;
-    static String marca;
-     
-    public static void main(String[] args) {
-        auto miAuto = new auto();
-        miAuto.auto = "Toyota";
-        miAuto.patente = 1234;
-        miAuto.marca = "Corolla";
-
-        System.out.println("Mi auto es un " + miAuto.marca + " con patente " + miAuto.patente);
+public class tematica {
+    public static void main(String [] args) {
+    int days;
+    int semana;
     }
-    
- }
+     { switch (days) {
+        case 1:
+            System.out.println("Lunes");
+            break;
+        case 2:
+            System.out.println("Martes");
+            break;
+        case 3:
+            System.out.println("Miercoles");
+            break;
+        case 4:
+            System.out.println("Jueves");
+            break;
+        case 5:
+            System.out.println("Viernes");
+            break;
+        case 6:
+            System.out.println("Sabado");
+            break;
+        case 7:
+            System.out.println("Domingo");
+            break;
+        default:
+            System.out.println("Dia invalido");
 
- public class persona { 
-    private String nombre;
-    static int edad;
-    static float altura; 
-    static float peso; 
-    private String direccion;
-    private String telefono;
-    private String correo;
+    } {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Ingrese el numero de semana: "); 
+        semana = teclado.nextInt();
 
-    public persona(String nombre, int edad, float altura, float peso, String direccion, String telefono, String correo) {
-        this.nombre = nombre;
-        this.edad = edad;
-        this.altura = altura;
-        this.peso = peso;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        this.correo = correo;
-    }
- }
-
- public class estudiante extends persona {
-    private String carrera;
-    private int anioIngreso;
-
-    public estudiante(String nombre, int edad, float altura, float peso, String direccion, String telefono, String correo, String carrera, int anioIngreso) {
-        super(nombre, edad, altura, peso, direccion, telefono, correo);
-        this.carrera = carrera;
-        this.anioIngreso = anioIngreso;
-    }
-
-    public String getCarrera() {
-        return carrera;
-    }
-
-    public int getAnioIngreso() {
-        return anioIngreso;
-    }
- }
-
- public class ano-bisiesto {
-    public static void main(String[] args) {
-        int year = 2024;
-        if (year % 4 == 0 && (year % 100 != 0 || year % 400 == 0)) {
-            System.out.println(year + " es un año bisiesto.");
+        if (semana > 0 ) {
+            System.out.println("es la semana numero " + semana);
         } else {
-            System.out.println(year + " no es un año bisiesto.");
-        }
+            System.out.println("Semana invalida");
+        }.    
     }
- }
 
- public class contador {
+
+}
+}
+
+
+public class notas {
     public static void main(String [] args) {
-        int n = 10;
-        for (int i = 0 ; i < n ; i++) {
-            System.out.println("El valor de i es: " + i);   
+       Scanner teclado = new Scanner(System.in);
+       int[] notas = new int[5];
+       int notaMaxima = 0;
+       int aprobados = 0;
+       int desaprobados = 0;
+       int suma = 0;
+         for (int i = 0; i < notas.length; i++) {
+            System.out.println("Ingrese la nota " + (i + 1) + ": ");
+            notas[i] = teclado.nextInt();
+         } 
+         for (int i = 0; i < notas.length; i++) {
+            suma += notas[i];
+        
+            if (notas[i] >= 6) {
+                aprobados++;
+            } else {
+                desaprobados++;
+            }
+            if (notas[i] > notaMaxima) {
+                notaMaxima = notas[i];
+            }
+         }
+        
+         double promedio = (double) suma / notas.length;
+
+        // Mostrar resultados
+        System.out.println("----- RESULTADOS -----");
+
+        System.out.println("Notas ingresadas:");
+        for (int i = 0; i < notas.length; i++) {
+            System.out.println(notas[i]);
         }
-    }
- }
 
- public class suma { 
-    public static void main(String [] args)
-{
-    int n = 10;
-    int z = 20;
+        System.out.println("Promedio: " + promedio);
+        System.out.println("Aprobados: " + aprobados);
+        System.out.println("Desaprobados: " + desaprobados);
+        System.out.println("Nota mas alta: " + notaMaxima);
 
-    {
-     int sum = n + z;
-        System.out.println("La suma es: " + sum);
+        teclado.close();
     }
 }
- }
-
- public class persona {
-
-    public static void main(string [] args); {
-      Scanners edad = new Scanner(System.in);
-        System.out.println("Ingrese su edad: ");
-       int edad = edad.nextInt();
- 
-    }
- }
-
-public class calculoMatemtico { 
-    public static void calculoMatemtico (String [] args){
-      Scanners num1 = new Scanner(System.in);
-        System.out.println("Ingrese el primer numero: ");
-        int num1 = num1.nextInt();
-        Scanners num2 = new Scanner(System.in);
-        System.out.println("Ingrese el segundo numero: ");      
-        Scanners suma = new Scanner(System.in);
-        double suma = num1 + num2; 
-        System.out.println("La suma es: " + suma);
-    } 
-}
-
-
-
-public class mayorEdad {
-    public static void main(String [] args );
-    int n = 18; 
-    for (int n = 0 ; n < 10 ; n++) {
-        if (n >= 18) {
-            System.out.println("Es mayor de edad");
-        } else {
-            System.out.println("Es menor de edad");
-        }
-    }
-}
-
-
-public class ejemplo{ 
-    public static void main(String [] args)  {
-    System.out.println("Ingrese su correo electronico: ");
-    String email = email.next.Line();
-    if (email.equals(email)) {
-        System.out.println("El correo electronico es correcto");
-    } else {
-        System.out.println("El correo electronico es incorrecto"); 
-    }
-}
-
-
-public class datosExpuestos {
-    public static void main(String [] args )
-    String nombre = "Juan";
-    String apellido = "Perez";
-    int edad = 20;
-    String direccion = "Calle Falsa 123";   
+    // este es un ejercicios de arrays, tengo aprender bien esa parte cuando me lo tomen en el examen
     
-}
-public class enPantalla { 
-    public static void main(String [] args) {
-   System.out.println(datosExpuestos.nombre);
-    }
-}
 
-public class retorno {
-     public static void main(String [] args){ 
-     for ( int i = 0 ; i < 10 ; i++) 
-       System.out.println("El valor de i es: " + i);
-     }
-}
- 
-public class escala {
-    public static void main(String [] args ){
-        int i = 0;
-        while (i < 10 && i >= 0) { 
-            do {
-                System.out.pintln("El valor de i es: " + i);
-                i++;
-            } while (i < 10);
+
+    class Contacto { 
+        String nombre;
+        String telefono;
+
+        public Contacto(String nombre, String telefono) {
+            this.nombre = nombre;
+            this.telefono = telefono;
+        }
+        public void mostrarInformacion() {
+            System.out.println("Nombre: " + nombre + " Teléfono: " + telefono);
         }
     }
-
-}
-
-public class intercambio {
-    public static void main(String [] args) {
-        int a = 5;
-        int b = 10;
-        System.out.println("Antes: a = " + a + ", b = " + b);
-
-        int aux = a;
-        a = b;
-        b = aux;
-        System.out.println("Despues: a = " + a + ", b = " + b);
-    }
-}
-
-public class precioFinal {
-    static final double IVA = 0.21;
-
-    public static void main(String [] args) {
-        double precio = 1500;
-        double precioConIva = precio + precio * IVA;
-        System.out.println("Precio sin IVA: $" + precio);
-        System.out.println("IVA (21%): $" + precio * IVA);
-        System.out.println("Precio final: $" + precioConIva);
-    }
-}
+        public class main { 
+        public static void main(String[] args) {
+        
+          Contacto contacto1 = new Contacto("Juan", "123456789");
+          Contacto contacto2 = new Contacto("María", "987654321");
+          Contacto contacto3 = new Contacto("pedro",  "47976642");
+          contacto1.mostrarInformacion();
+          contacto2.mostrarInformacion();
+          contacto3.mostrarInformacion();
+           }
+        }
