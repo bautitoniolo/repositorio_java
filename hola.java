@@ -134,3 +134,11 @@ public class notas {
           contacto3.mostrarInformacion();
            }
         }
+
+
+    public String getNombre() {return nombre;} 
+    public void setNombre(String nombre) {this.nombre = nombre;}
+    public String setEdad(int edad) {
+        if (edad >= 0) 
+            this.edad = edad;
+    }
